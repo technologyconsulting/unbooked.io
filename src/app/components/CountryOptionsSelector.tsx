@@ -4,10 +4,7 @@ import useSWR from "swr";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function CountryOptionsSelector() {
-  const { data, error, isLoading } = useSWR(
-    "http://localhost:3000/api/countries",
-    fetcher,
-  );
+  const { data, error, isLoading } = useSWR("/api/countries", fetcher);
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <option>loading...</option>;

@@ -34,7 +34,7 @@ export default function RootLayout({
               aria-label="Global"
             >
               <div className="flex lg:flex-1">
-                <a href="#" className="-m-1.5 p-1.5">
+                <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">unbooked.io</span>
                   <Image
                     className="h-12 w-auto md:h-12"

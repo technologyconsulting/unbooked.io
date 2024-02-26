@@ -25,7 +25,7 @@ const CitySelectorOptions: React.FC<CitySelectorOptionsProps> = ({
   country,
 }) => {
   const { data, error, isLoading } = useSWR(
-    `http://localhost:3000/api/cities?country=${country}`,
+    `/api/cities?country=${country}`,
     fetcher,
   );
 
