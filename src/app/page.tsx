@@ -49,7 +49,7 @@ function classNames(...classes: string[]) {
 export default function Home() {
   const imInterested = useInterestedStore((state) => state);
   const [why, setWhy] = useState(interestedWhy[2]);
-  const [thankyou, setThankyou] = useState(true);
+  const [thankyou, setThankyou] = useState(false);
 
   useEffect(() => {
     // useCountryStore.persist.rehydrate();
