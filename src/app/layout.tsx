@@ -38,7 +38,7 @@ export default function RootLayout({
                   <span className="sr-only">unbooked.io</span>
                   <Image
                     className="h-12 w-auto md:h-12"
-                    src="/unbooked.png"
+                    src="/Unbooked.png"
                     alt=""
                     width={64}
                     height={64}
