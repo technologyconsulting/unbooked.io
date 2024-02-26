@@ -25,11 +25,11 @@ const CitySelectorOptions: React.FC<CitySelectorOptionsProps> = ({
   country,
 }) => {
   const { data, error, isLoading } = useSWR(
-    `/api/cities?country=${country}`,
+    `https://unbooked.io/api/cities?country=${country}`,
     fetcher,
   );
 
-  if (error) return <div>failed to load</div>;
+  if (error) return <option>failed to load</option>;
   if (isLoading) return <option>loading...</option>;
 
   const results = data?.result
