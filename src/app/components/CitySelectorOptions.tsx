@@ -21,26 +21,26 @@ interface City {
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-const CitySelectorOptions: React.FC<CitySelectorOptionsProps> = ({
-  country,
-}) => {
+const CitySelectorOptions = (country: any) => {
   const { data, error, isLoading } = useSWR(
-    `https://unbooked.io/api/cities?country=${country}`,
+    `/api/cities?country=${country}`,
     fetcher,
   );
 
   if (error) return <option>failed to load</option>;
   if (isLoading) return <option>loading...</option>;
 
-  const results = data?.result
-    .sort((a: City, b: City) => a.name.localeCompare(b.name))
-    .map((city: City) => {
-      return (
-        <option key={city.id} className="text-black">
-          {city.name}
-        </option>
-      );
-    });
+  const results = data?.result;
+  // .sort((a: City, b: City) =>
+  //   a.name.localeCompare(b.name),
+  // );
+  // .map((city: City) => {
+  //   return (
+  //     <option key={city.id} className="text-black">
+  //       {city.name}
+  //     </option>
+  //   );
+  // });
   return results;
 };
 
