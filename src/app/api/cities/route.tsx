@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import path from "path";
 import { NextRequest, NextResponse } from "next/server";
 
 interface City {
@@ -17,7 +18,8 @@ interface City {
 
 export async function GET(request: NextRequest) {
   const country = request.nextUrl.searchParams.get("country");
-  const file = await fs.readFile("src/app/data/cities.json", "utf8");
+  const filePath = path.join(process.cwd(), "src/app/data/cities.json");
+  const file = await fs.readFile(filePath, "utf8");
   const result: City[] = JSON.parse(file)
     .filter((city: City) => {
       return city.country_name === country;
