@@ -56,9 +56,7 @@ export default function Home() {
   }, []);
 
   function updatingImInterested(why: MailListItem) {
-    console.log(`Triggered`);
     imInterested.updateImInterested({ interested: why.title });
-    console.log(imInterested);
   }
   function updatingEmail(email: string) {
     imInterested.updateImInterested({ email: email });
@@ -77,8 +75,6 @@ export default function Home() {
     setThankyou(true);
     setWhy(interestedWhy[2]);
     imInterested.reset();
-
-    console.log(error);
   }
 
   return (
