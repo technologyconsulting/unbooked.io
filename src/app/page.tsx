@@ -49,7 +49,7 @@ function classNames(...classes: string[]) {
 export default function Home() {
   const imInterested = useInterestedStore((state) => state);
   const [why, setWhy] = useState(interestedWhy[2]);
-  const [thankyou, setThankyou] = useState(false);
+  const [thankyou, setThankyou] = useState(true);
 
   useEffect(() => {
     // useCountryStore.persist.rehydrate();
@@ -130,7 +130,7 @@ export default function Home() {
             grow.
           </p>
           {thankyou ? (
-            <p className="mt-6 text-center text-2xl leading-8 text-[#ff5757]">
+            <p className="pt-40 text-center text-2xl leading-8 text-[#ff5757] md:min-h-[422px]">
               Thank you for your interest
             </p>
           ) : (
@@ -256,7 +256,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <p className="mt-4 max-w-xl text-right text-sm leading-6 text-gray-900 lg:mx-auto">
+      <p className="mt-4 max-w-xl text-center text-sm leading-6 text-gray-900 lg:mx-auto lg:text-right">
         We care about your data. Read our{" "}
         <Link
           href="/privacy-policy"
