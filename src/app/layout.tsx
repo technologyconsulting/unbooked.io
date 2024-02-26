@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Unbooked.io - Helping the community and local businesses grow.",
-  description: "A marketplace where community and local business can connect.",
+  description:
+    "A marketplace where community and local businesses can connect.",
   icons: {
     icon: [
       {

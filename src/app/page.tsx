@@ -126,7 +126,7 @@ export default function Home() {
             </span>{" "}
           </h1>
           <p className="mt-6 text-center text-2xl leading-8 text-gray-600">
-            a marketplace where community and local business can connect and
+            a marketplace where community and local businesses can connect and
             grow.
           </p>
           {thankyou ? (
