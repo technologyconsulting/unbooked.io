@@ -2,7 +2,7 @@ import React from "react";
 
 function PrivacyPolicy() {
   return (
-    <div className="relative isolate m-auto max-w-4xl pt-14 text-black">
+    <div className="relative isolate m-auto max-w-4xl px-8 pt-24 text-black">
       <h1 className="relative mt-0 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
         unbooked
         <span className="absolute top-[-10px] text-[16px] sm:top-0 sm:text-[24px]">
