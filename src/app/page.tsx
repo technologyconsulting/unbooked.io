@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState, FormEvent } from "react";
-import { useCountryStore } from "./state/countryState";
 import { useInterestedStore } from "./state/interestedState";
 import { RadioGroup } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
