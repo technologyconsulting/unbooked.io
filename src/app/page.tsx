@@ -45,7 +45,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Home() {
-  const [clickedButton, setClickedButton] = useState(null);
+  const [clickedButton, setClickedButton] = useState<string | null>(null);
   const imInterested = useInterestedStore((state) => state);
   const [why, setWhy] = useState(interestedWhy[0]);
   const [thankyou, setThankyou] = useState(false);
