@@ -294,9 +294,9 @@ export default function Home() {
             >
               {/* Interested */}
               <RadioGroup value={why} onChange={setWhy}>
-                <RadioGroup.Label className="text-base font-semibold leading-6 text-gray-900">
+                <p className="text-base font-semibold leading-6 text-gray-900">
                   Interested? Tell us why
-                </RadioGroup.Label>
+                </p>
 
                 <div className="my-4 grid grid-cols-1 gap-y-6 sm:grid-cols-3 sm:gap-x-4">
                   {interestedWhy.map((why) => (
