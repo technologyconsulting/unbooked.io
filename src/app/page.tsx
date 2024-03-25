@@ -3,8 +3,6 @@ import { useEffect, useState, FormEvent } from "react";
 import { useInterestedStore } from "./state/interestedState";
 import { RadioGroup } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
-import CountrySelector from "./components/CountrySelector";
-import CitySelector from "./components/CitySelector";
 
 //* Supabase
 import { createClient } from "@supabase/supabase-js";
