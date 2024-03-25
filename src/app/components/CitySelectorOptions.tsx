@@ -1,5 +1,8 @@
+"use server";
 import React from "react";
-import useSWR from "swr";
+import { promises as fs } from "fs";
+import path from "path";
+// import useSWR from "swr";
 
 interface CitySelectorOptionsProps {
   country: string;
@@ -19,18 +22,18 @@ interface City {
   wikiDataId: string;
 }
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-const CitySelectorOptions = (country: any) => {
-  const { data, error, isLoading } = useSWR(
-    `/api/cities?country=${country}`,
-    fetcher,
-  );
+const CitySelectorOptions = async (country: any) => {
+  // const { data, error, isLoading } = useSWR(
+  //   `/api/cities?country=${country}`,
+  //   fetcher,
+  // );
 
-  if (error) return <option>failed to load</option>;
-  if (isLoading) return <option>loading...</option>;
+  // if (error) return <option>failed to load</option>;
+  // if (isLoading) return <option>loading...</option>;
 
-  const results = data?.result;
+  // const results = data?.result;
   // .sort((a: City, b: City) =>
   //   a.name.localeCompare(b.name),
   // );
@@ -41,7 +44,19 @@ const CitySelectorOptions = (country: any) => {
   //     </option>
   //   );
   // });
-  return results;
+  // return results;
+
+  const filePath = path.join(process.cwd(), "src/app/data/cities.json");
+  const file = await fs.readFile(filePath, "utf8");
+  const result: City[] = JSON.parse(file)
+    .filter((city: City) => {
+      return city.country_name === country;
+    })
+    .map((city: City) => {
+      return city;
+    });
+
+  return result;
 };
 
 export default CitySelectorOptions;

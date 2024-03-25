@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -26,7 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <GoogleTagManager gtmId="G-VSENR9H8FR" />
+      <body className={`${inter.className} overflow-y-scroll`}>
         <div className="h-full min-h-svh bg-white">
           {/* Header */}
           <header className="absolute inset-x-0 top-0 z-50">

@@ -24,17 +24,30 @@ interface City {
   wikiDataId: string;
 }
 
-// [
-//   { name: "Leslie Alexander", username: "@lesliealexander" },
-//   // More users...
-// ];
+//
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 const CitySelector: React.FC<CitySelectorProps> = ({ countryZ }) => {
-  const people: City[] = CitySelectorOptions(countryZ);
+  const [people, setPeople] = useState([]);
+  // const people =
+  // [
+  //   { id: 1, name: "Leslie Alexander", username: "@lesliealexander" },
+  // ];
+
+  useEffect(() => {
+    // let getPeople;
+    // countryZ
+    //   ? (getPeople = () => {
+    //       const data = CitySelectorOptions(countryZ);
+    //       return data;
+    //     })
+    //   : setPeople(getPeople);
+  }, [countryZ]);
+
+  // CitySelectorOptions(countryZ);
   const imInterested = useInterestedStore((state) => state);
 
   const [query, setQuery] = useState("");
@@ -52,6 +65,7 @@ const CitySelector: React.FC<CitySelectorProps> = ({ countryZ }) => {
         });
 
   return (
+    // <></>
     // <div className="w-[48%]">
     //   <label
     //     htmlFor="city"

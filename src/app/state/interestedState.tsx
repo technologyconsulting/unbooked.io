@@ -5,8 +5,10 @@ type State = {
   interestedForm: {
     interested: string;
     email: string;
-    country: string;
-    city: string;
+    businessName: string;
+    postcode: string;
+    // country: string;
+    // city: string;
   };
 };
 
@@ -17,10 +19,12 @@ type Action = {
 
 const initialState: State = {
   interestedForm: {
-    interested: "both",
+    interested: "Personally",
     email: "",
-    country: "",
-    city: "",
+    businessName: "",
+    postcode: "",
+    // country: "",
+    // city: "",
   },
 };
 
