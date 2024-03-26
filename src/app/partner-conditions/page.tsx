@@ -25,8 +25,10 @@ function PartnerConditions() {
         Saturday or Sunday, then a platform transaction fee is applied for each
         booking.
         <br />
-        <br /> * Partners get zero platform transaction fees applied. This does
-        not include debt or credit card transaction fees applied by 3rd parties.
+        <br /> * Partners get zero platform transaction fees applied.
+        <br /> * This does not include debt or credit card transaction fees
+        applied by 3rd parties.
+        <br /> * This does not include ad fees if you wish to pay for an ad.
       </p>
     </div>
   );
